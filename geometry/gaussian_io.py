@@ -172,7 +172,7 @@ class GaussianIO:
         self.active_sh_degree = self.max_sh_degree
 
     
-    def gaussian_3d_coeff(xyzs, covs):
+    def gaussian_3d_coeff(self, xyzs, covs):
         # xyzs: [N, 3]
         # covs: [N, 6]
         x, y, z = xyzs[:, 0], xyzs[:, 1], xyzs[:, 2]
