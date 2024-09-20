@@ -266,7 +266,7 @@ class GaussianIO:
                     val = 0
                     for start in range(0, g_covs.shape[1], batch_g):
                         end = min(start + batch_g, g_covs.shape[1])
-                        w = gaussian_3d_coeff(
+                        w = self.gaussian_3d_coeff(
                             g_pts[:, start:end].reshape(-1, 3),
                             g_covs[:, start:end].reshape(-1, 6),
                         ).reshape(
